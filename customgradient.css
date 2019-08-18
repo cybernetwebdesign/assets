@@ -1,0 +1,8 @@
+.gradient{
+	background-image: -webkit-gradient(linear,0% 0%,100% 100%,color-stop(0,#414345 ),color-stop(1,#232526)) !important;
+    background-image: -webkit-repeating-linear-gradient(top left,#414345 0%,#232526 100%) !important;
+    background-image: linear-gradient(to right,#414345,#232526) !important;
+}
+.mb_header #navbar li a{
+    color: #ffffff !important;
+}
