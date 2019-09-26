@@ -3,7 +3,7 @@
     			source: function(request, response){
     				var query = request.term;
     				$.ajax({
-    					url: "<?php echo $site_url;?>/autocomplete.php?q="+query,  
+    					url: "https://youtube.download-lagu-mp3.com/autocomplete.php?q="+query,  
     					dataType: 'jsonp',
     					success: function(data, textStatus, request) { 
     					   response( $.map( data[1], function(item) {
