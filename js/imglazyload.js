@@ -1,0 +1,5 @@
+;(function($,win){'use strict';$.fn.imgLazyLoad=function(options){var elements=this,settings=$.extend({container:win,effect:'fadeIn',speed:600,delay:400,callback:function(){}},options),container=$(settings.container),loading=function(){if(!elements.length){return container.off('scroll.lazyLoad');}
+var containerHeight=container.outerHeight(),containerTop=container.scrollTop();if(settings.container!==win){containerTop=container.offset().top;}
+elements.each(function(){var $this=$(this),top=$this.offset().top;if(containerTop+containerHeight>top&&top+$this.outerHeight()>containerTop){elements=elements.not($this);var loadingSrc=$this.attr('data-src');$(new Image()).prop('src',loadingSrc).load(function(){$this.hide().attr('src',loadingSrc)[settings.effect](settings.speed,function(){settings.callback.call(this);}).removeAttr('data-src');});}});},throttle=function(fn,delay){if(!delay){return fn;}
+var timer;return function(){clearTimeout(timer);timer=setTimeout(function(){fn();},delay);}};if(!container.length){throw settings.container+' is not defined';}
+loading();container.on('scroll.imgLazyLoad',throttle(loading,settings.delay));return this;};})(jQuery,window);
