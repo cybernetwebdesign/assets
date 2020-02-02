@@ -47,7 +47,7 @@ $(document).on("keyup", "#query", function (event) {
             $(this).text('Close'); $(this).parent().parent().after('<div id="initiaze-' + ytid + '" class="file margin">Initiliazing downloader <i class="fa fa-cog fa-spin"></i></div>'); setTimeout(function () {
                 $('#initiaze-' + ytid).html(`
     
-    <div id="download" class="file margin"><br><br>
+    <div id="download" class="file margin">
     <div class="name">`+ title + `</div><div class="progress">The file is ready. Please click the download button to start the download.</div><hr>
     <div class="options" style="display: block;">
     <a href="#" rel="nofollow" data-frame="`+ ytid + `" id="iframeku" class="url">Download MP3</a>
