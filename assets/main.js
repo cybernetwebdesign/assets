@@ -203,7 +203,6 @@ $(document).ready(function() {
                 $('#initiaze-' + ytid).html(`
     
     <div id="download" class="file margin">
-    <br>
     <div class="name">` + title + `</div><div class="progress">The file is ready. Please click the download button to start the download.</div><hr>
     <div class="options" style="display: block;">
     <a href="#" rel="nofollow" data-frame="` + ytid + `" id="iframeku" class="url">Download MP3</a>
