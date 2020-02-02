@@ -202,7 +202,7 @@ $(document).ready(function() {
             setTimeout(function() {
                 $('#initiaze-' + ytid).html(`
     
-    <div id="download" class="file margin">
+    <div id="download" class="file margin"><br><br><br>
     <div class="name">` + title + `</div><div class="progress">The file is ready. Please click the download button to start the download.</div><hr>
     <div class="options" style="display: block;">
     <a href="#" rel="nofollow" data-frame="` + ytid + `" id="iframeku" class="url">Download MP3</a>
@@ -226,7 +226,7 @@ $(document).ready(function() {
             $(this).parent().parent().before('<div id="player-' + ytid + '" class="file margin">Loading player <i class="fa fa-cog fa-spin"></i></div>');
             setTimeout(function() {
                 $('#player-' + ytid).html(`
-    <div id="player"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=` + ytid + `" width="100%" height="315" scrolling="no" frameborder="none" allow="autoplay"></iframe></div>
+    <div id="player"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=` + ytid + `" width="100%" height="315" scrolling="no" frameborder="none" allow="autoplay"></iframe></div><br><br><br>
     `);
             }, 500);
         } else {
@@ -239,7 +239,7 @@ $(document).ready(function() {
         var ytid = $(this).data('frame');
         if ($(this).text() == 'Download MP3') {
             $(this).text('Close');
-            $(this).parent().parent().prepend('<p><div class="frameme" id="fra-' + ytid + '"><iframe style="border:none;width:100%;height:100%;margin:10px;" src="https://api.download-lagu-mp3.com/@api/button/mp3/' + ytid + '"></iframe></div></p>');
+            $(this).parent().parent().prepend('<p><div class="frameme" id="fra-' + ytid + '"><iframe style="border:none;width:100%;height:100%;margin:10px;" src="https://api.download-lagu-mp3.com/@api/button/mp3/' + ytid + '"></iframe></div></p><br><br>');
         } else {
             $('#fra-' + ytid).remove();
             $('#loader-' + ytid).remove();
