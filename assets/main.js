@@ -147,7 +147,7 @@ $(document).on("submit", "form", function() {
                         var data = json.items;
                         var query = json.query;
                         if ($("#load").hide(), 0 < json.status) {
-                            text = text + '<div id="result_' + 0 + '" class="result"> <div class="name">' + data.title + '</div> <div class="properties">Source: YouTube • Duration: ' + data.duration + ' • Bitrate: 192 kbps</div> <div class="options"><a data-down="' + data.id + '" data-title="' + data.title + '" href="#" rel="nofollow" target="_self" class="download">Download</a><a data-play="' + data.id + '" href="#" rel="nofollow" class="player">Play</a></div> </div>';
+                            text = text + '<div id="result_' + 0 + '" class="result"> <div class="name">' + data.title + '</div> <div class="properties">Source: YouTube • Duration: ' + data.duration + ' • Bitrate: 320 kbps</div> <div class="options"><a data-down="' + data.id + '" data-title="' + data.title + '" href="#" rel="nofollow" target="_self" class="download">Download</a><a data-play="' + data.id + '" href="#" rel="nofollow" class="player">Play</a></div> </div>';
                             $("#text").before('<div id="results">{R}</div>'.replace(/{Q}/, query).replace(/{C}/, data.length).replace(/{R}/, text));
                         } else {
                             $("#text").before('<div id="error" class="file">' + json.msg + "</div>");
@@ -171,7 +171,7 @@ $(document).on("submit", "form", function() {
                         var query = json.query;
                         if ($("#load").hide(), 0 < data.length) {
                             for (i = 0; i < data.length; i++) {
-                                text = text + '<div id="result_' + i + '" class="result"> <div class="name">' + data[i].title + '</div> <div class="properties">Source: YouTube • Duration: ' + data[i].duration + ' • Bitrate: 192 kbps</div> <div class="options"><a data-down="' + data[i].id + '" data-title="' + data[i].title + '" href="#" rel="nofollow" target="_self" class="download">Download</a><a data-play="' + data[i].id + '" href="#" rel="nofollow" class="player">Play</a></div> </div>';
+                                text = text + '<div id="result_' + i + '" class="result"> <div class="name">' + data[i].title + '</div> <div class="properties">Source: YouTube • Duration: ' + data[i].duration + ' • Bitrate: 320 kbps</div> <div class="options"><a data-down="' + data[i].id + '" data-title="' + data[i].title + '" href="#" rel="nofollow" target="_self" class="download">Download</a><a data-play="' + data[i].id + '" href="#" rel="nofollow" class="player">Play</a></div> </div>';
                                 i++;
                             }
                             $("#text").before('<div id="results"><p>Here you can find all search results for your search query &bdquo;{Q}&rdquo;. We\'ve found {C} matching results. Now you have the opportunity to listen to each result before downloading it. If you wish to do so, click on the &bdquo;Play&rdquo; button.</p>{R}</div>'.replace(/{Q}/, query).replace(/{C}/, data.length).replace(/{R}/, text));
