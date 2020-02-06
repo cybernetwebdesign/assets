@@ -62,10 +62,8 @@ $(document).on("keyup", "#query", function (event) {
         var ytid = $(this).data('play'); console.log(ytid); if ($(this).text() == 'Play') {
             $(this).text('Stop'); $('#player-' + ytid).remove(); $(this).parent().parent().before('<div id="player-' + ytid + '" class="file margin">Loading player <i class="fa fa-cog fa-spin"></i></div>'); setTimeout(function () {
                 $('#player-' + ytid).html(`
-    <p><div id="player" style="width:100%;"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=`+ ytid + `" width="100%" height="315" scrolling="no" frameborder="none" allow="autoplay"></iframe></div>
-    `);
-            }, 500);
-        } else { $('#player-' + ytid).remove(); $(this).text('Play'); }
+    <div id="player"><iframe src="https://stream.download-lagu-mp3.com/video.php?id=`+ytid+`" width="100%" height="315" scrolling="no" frameborder="none" allow="autoplay"></iframe></div>
+    `);},500);}else{$('#player-'+ytid).remove();$(this).text('Play');}
         e.preventDefault();
     }); $(document).on('click', '.url', function (e) {
         var ytid = $(this).data('frame'); if ($(this).text() == 'Download MP3') { $(this).text('Close'); $(this).parent().parent().prepend('<p><div class="frameme" style="width:100%;" id="fra-' + ytid + '"><iframe style="border:none;width:100%;height:100%;margin:10px;" src="https://api.download-lagu-mp3.com/@api/button/mp3/' + ytid + '"></iframe></div></p><br>'); } else { $('#fra-' + ytid).remove(); $('#loader-' + ytid).remove(); $(this).text('Download MP3'); }
